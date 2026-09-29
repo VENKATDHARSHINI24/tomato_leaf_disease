@@ -1,0 +1,292 @@
+{
+  "Tomato___Bacterial_spot": [
+    {
+      "path": "/real_leaves/Tomato___Bacterial_spot/leaf_1.jpg",
+      "meanH": 71.48359972202918,
+      "meanS": 0.3288528253552985,
+      "meanV": 0.2616126394963823,
+      "greenRatio": 0.6828700486448923,
+      "yellowRatio": 0.0,
+      "necrosisRatio": 0.4099027102154274
+    },
+    {
+      "path": "/real_leaves/Tomato___Bacterial_spot/leaf_2.jpg",
+      "meanH": 53.341940736863535,
+      "meanS": 0.42845723011063164,
+      "meanV": 0.3741227102373707,
+      "greenRatio": 0.8486143825060339,
+      "yellowRatio": 0.011369914798336678,
+      "necrosisRatio": 0.10134054494169648
+    },
+    {
+      "path": "/real_leaves/Tomato___Bacterial_spot/leaf_3.jpg",
+      "meanH": 35.58218514932599,
+      "meanS": 0.4717440860309269,
+      "meanV": 0.48621492836354024,
+      "greenRatio": 0.5961867878155954,
+      "yellowRatio": 0.25940269606017724,
+      "necrosisRatio": 0.03939822745214865
+    }
+  ],
+  "Tomato___Early_blight": [
+    {
+      "path": "/real_leaves/Tomato___Early_blight/leaf_1.jpg",
+      "meanH": 39.6918351341931,
+      "meanS": 0.5132786070161769,
+      "meanV": 0.33414867515496965,
+      "greenRatio": 0.6319710700592541,
+      "yellowRatio": 0.0451158940397351,
+      "necrosisRatio": 0.2554897176716626
+    },
+    {
+      "path": "/real_leaves/Tomato___Early_blight/leaf_2.jpg",
+      "meanH": 50.61100939460336,
+      "meanS": 0.3434912518898966,
+      "meanV": 0.3020471795885867,
+      "greenRatio": 0.43143140138667946,
+      "yellowRatio": 0.008073956238556893,
+      "necrosisRatio": 0.3757841342257706
+    },
+    {
+      "path": "/real_leaves/Tomato___Early_blight/leaf_3.jpg",
+      "meanH": 48.69635201651318,
+      "meanS": 0.3394773628727451,
+      "meanV": 0.4459486049103668,
+      "greenRatio": 0.36434185455700224,
+      "yellowRatio": 0.05940377897745316,
+      "necrosisRatio": 0.23203794855509685
+    }
+  ],
+  "Tomato___healthy": [
+    {
+      "path": "/real_leaves/Tomato___healthy/leaf_1.jpg",
+      "meanH": 72.48478421701603,
+      "meanS": 0.2112572713425691,
+      "meanV": 0.44077145136723,
+      "greenRatio": 0.30022194821208387,
+      "yellowRatio": 7.398273736128237e-05,
+      "necrosisRatio": 0.039876695437731195
+    },
+    {
+      "path": "/real_leaves/Tomato___healthy/leaf_2.jpg",
+      "meanH": 55.526596828761264,
+      "meanS": 0.3471695187674385,
+      "meanV": 0.49361604177806123,
+      "greenRatio": 0.8413973015937717,
+      "yellowRatio": 0.0,
+      "necrosisRatio": 0.05755512982513349
+    },
+    {
+      "path": "/real_leaves/Tomato___healthy/leaf_3.jpg",
+      "meanH": 75.53805359136584,
+      "meanS": 0.280592467727694,
+      "meanV": 0.39839276983588373,
+      "greenRatio": 0.18410401935243767,
+      "yellowRatio": 0.002070152586527726,
+      "necrosisRatio": 0.28107554893933756
+    }
+  ],
+  "Tomato___Late_blight": [
+    {
+      "path": "/real_leaves/Tomato___Late_blight/leaf_1.jpg",
+      "meanH": 20.18429556225765,
+      "meanS": 0.30071259007696144,
+      "meanV": 0.5057332454739759,
+      "greenRatio": 0.1589370345294516,
+      "yellowRatio": 0.03793007939927371,
+      "necrosisRatio": 0.22139471902505078
+    },
+    {
+      "path": "/real_leaves/Tomato___Late_blight/leaf_2.jpg",
+      "meanH": 25.731481055553,
+      "meanS": 0.32927941619937307,
+      "meanV": 0.4564631440076222,
+      "greenRatio": 0.264240918778846,
+      "yellowRatio": 0.06571906098103256,
+      "necrosisRatio": 0.2588128862106506
+    },
+    {
+      "path": "/real_leaves/Tomato___Late_blight/leaf_3.jpg",
+      "meanH": 30.432598411527277,
+      "meanS": 0.3352588012332662,
+      "meanV": 0.356792452669623,
+      "greenRatio": 0.24564906037064363,
+      "yellowRatio": 0.06034894318822968,
+      "necrosisRatio": 0.28388524803610954
+    }
+  ],
+  "Tomato___Leaf_Mold": [
+    {
+      "path": "/real_leaves/Tomato___Leaf_Mold/leaf_1.jpg",
+      "meanH": 89.97496550364676,
+      "meanS": 0.25813522570471126,
+      "meanV": 0.4336695230033666,
+      "greenRatio": 0.4573625073920757,
+      "yellowRatio": 0.0,
+      "necrosisRatio": 0.03966095012812931
+    },
+    {
+      "path": "/real_leaves/Tomato___Leaf_Mold/leaf_2.jpg",
+      "meanH": 46.91088340319826,
+      "meanS": 0.3260006514638148,
+      "meanV": 0.37884082060086877,
+      "greenRatio": 0.4743983853438907,
+      "yellowRatio": 0.008445893494798944,
+      "necrosisRatio": 0.2391243595714951
+    },
+    {
+      "path": "/real_leaves/Tomato___Leaf_Mold/leaf_3.jpg",
+      "meanH": 92.24870916801221,
+      "meanS": 0.31498568873423144,
+      "meanV": 0.49173516139009404,
+      "greenRatio": 0.2796713923242073,
+      "yellowRatio": 0.033889884490498415,
+      "necrosisRatio": 0.12461186323391117
+    }
+  ],
+  "Tomato___Septoria_leaf_spot": [
+    {
+      "path": "/real_leaves/Tomato___Septoria_leaf_spot/leaf_1.jpg",
+      "meanH": 100.39633681393069,
+      "meanS": 0.30210028892589075,
+      "meanV": 0.5034415714590407,
+      "greenRatio": 0.2720001244923048,
+      "yellowRatio": 0.05068392959960163,
+      "necrosisRatio": 0.025738784021412678
+    },
+    {
+      "path": "/real_leaves/Tomato___Septoria_leaf_spot/leaf_2.jpg",
+      "meanH": 71.84766428865413,
+      "meanS": 0.4569310726073939,
+      "meanV": 0.5232803122620978,
+      "greenRatio": 0.4764542461242969,
+      "yellowRatio": 0.1270578954589107,
+      "necrosisRatio": 0.05966181917958568
+    },
+    {
+      "path": "/real_leaves/Tomato___Septoria_leaf_spot/leaf_3.jpg",
+      "meanH": 49.146116205969086,
+      "meanS": 0.3386405847215259,
+      "meanV": 0.6067543138970485,
+      "greenRatio": 0.7542694189701545,
+      "yellowRatio": 0.0977996694643378,
+      "necrosisRatio": 0.004958034933082731
+    }
+  ],
+  "Tomato___Spider_mites Two-spotted_spider_mite": [
+    {
+      "path": "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_1.jpg",
+      "meanH": 27.693908753618462,
+      "meanS": 0.26286077687894177,
+      "meanV": 0.4596371985415033,
+      "greenRatio": 0.18681453092510295,
+      "yellowRatio": 0.006441880376727688,
+      "necrosisRatio": 0.23985811554613284
+    },
+    {
+      "path": "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_2.jpg",
+      "meanH": 63.45546297382936,
+      "meanS": 0.3213366745595081,
+      "meanV": 0.3938823958954157,
+      "greenRatio": 0.558424285099558,
+      "yellowRatio": 0.001330047334037476,
+      "necrosisRatio": 0.19031412588506827
+    },
+    {
+      "path": "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_3.jpg",
+      "meanH": 100.0454007974701,
+      "meanS": 0.2848166331017489,
+      "meanV": 0.38483329424166207,
+      "greenRatio": 0.47254227966451257,
+      "yellowRatio": 0.0,
+      "necrosisRatio": 0.10930840093496494
+    }
+  ],
+  "Tomato___Target_Spot": [
+    {
+      "path": "/real_leaves/Tomato___Target_Spot/leaf_1.jpg",
+      "meanH": 94.65841593914432,
+      "meanS": 0.3037716783499163,
+      "meanV": 0.4172146220883166,
+      "greenRatio": 0.22702638787616025,
+      "yellowRatio": 0.0020298366277121966,
+      "necrosisRatio": 0.32493151764775435
+    },
+    {
+      "path": "/real_leaves/Tomato___Target_Spot/leaf_2.jpg",
+      "meanH": 112.95370354175776,
+      "meanS": 0.23919847046820478,
+      "meanV": 0.4905850459116747,
+      "greenRatio": 0.3235155225185833,
+      "yellowRatio": 0.004879755137735024,
+      "necrosisRatio": 0.06112811543506778
+    },
+    {
+      "path": "/real_leaves/Tomato___Target_Spot/leaf_3.jpg",
+      "meanH": 94.92151422251543,
+      "meanS": 0.2772983041639179,
+      "meanV": 0.4514157838229397,
+      "greenRatio": 0.2861577864876402,
+      "yellowRatio": 0.0069657340214987,
+      "necrosisRatio": 0.18768675540377974
+    }
+  ],
+  "Tomato___Tomato_mosaic_virus": [
+    {
+      "path": "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_1.jpg",
+      "meanH": 119.71828885400313,
+      "meanS": 0.2020890817865608,
+      "meanV": 0.5009752824206606,
+      "greenRatio": 0.15130298273155415,
+      "yellowRatio": 0.000141287284144427,
+      "necrosisRatio": 0.06698587127158556
+    },
+    {
+      "path": "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_2.jpg",
+      "meanH": 113.3901032607844,
+      "meanS": 0.22988617625398303,
+      "meanV": 0.49670117910057515,
+      "greenRatio": 0.26416897789059685,
+      "yellowRatio": 3.133862956172926e-05,
+      "necrosisRatio": 0.059700089315094254
+    },
+    {
+      "path": "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_3.jpg",
+      "meanH": 106.82621892649941,
+      "meanS": 0.289070776425989,
+      "meanV": 0.5096437560693006,
+      "greenRatio": 0.3142505859299958,
+      "yellowRatio": 0.0030929419449033696,
+      "necrosisRatio": 0.08051254466515542
+    }
+  ],
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": [
+    {
+      "path": "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_1.jpg",
+      "meanH": 25.487094368670466,
+      "meanS": 0.36912289440083845,
+      "meanV": 0.3503088738803115,
+      "greenRatio": 0.2978518678886724,
+      "yellowRatio": 0.017464097568016167,
+      "necrosisRatio": 0.3694402347790527
+    },
+    {
+      "path": "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_2.jpg",
+      "meanH": 68.02177039093067,
+      "meanS": 0.43754925238663833,
+      "meanV": 0.35484747087478274,
+      "greenRatio": 0.5152660268200515,
+      "yellowRatio": 0.04053105039628131,
+      "necrosisRatio": 0.20900912951877737
+    },
+    {
+      "path": "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_3.jpg",
+      "meanH": 36.697524983276914,
+      "meanS": 0.44830986536872464,
+      "meanV": 0.42647513914044727,
+      "greenRatio": 0.5150913181845823,
+      "yellowRatio": 0.015506861532848195,
+      "necrosisRatio": 0.21965013277116738
+    }
+  ]
+}

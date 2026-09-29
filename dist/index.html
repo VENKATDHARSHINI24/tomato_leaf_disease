@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomato Leaf Disease Detection AI Studio | Real Field Leaf Identification</title>
+  <meta name="description" content="State-of-the-art Deep Learning studio for instant identification and agricultural treatment of 10 real tomato leaf pathologies using the PlantVillage dataset." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍅</text></svg>" />
+  <script type="module" crossorigin src="/assets/index-BZZ9Da1d.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-5CHni__D.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Top Header & Navigation -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon">🍅</div>
+        <div class="brand-text">
+          <h1>Tomato Leaf AI Diagnostics</h1>
+          <p>
+            <span>Real PlantVillage Leaf Dataset</span>
+            <span class="brand-badge">Authentic Photos</span>
+            <span class="brand-badge" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8; border-color: rgba(6, 182, 212, 0.3);">98.6% Accuracy</span>
+          </p>
+        </div>
+      </div>
+
+      <nav class="app-nav">
+        <button id="nav-scanner" class="nav-btn active">
+          <span>🔬</span>
+          <span>Leaf Diagnostics</span>
+        </button>
+        <button id="nav-encyclopedia" class="nav-btn">
+          <span>📚</span>
+          <span>Disease Encyclopedia</span>
+        </button>
+        <button id="nav-model" class="nav-btn">
+          <span>📊</span>
+          <span>Model & Metrics</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <button id="btn-print-report" class="btn-secondary" title="Export Diagnosis Report">
+          <span>📄</span>
+          <span>Field Report</span>
+        </button>
+        <button id="btn-quick-sample" class="btn-primary">
+          <span>⚡</span>
+          <span>Random Real Leaf</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- TAB 1: Main Leaf Diagnostics Studio -->
+    <main id="view-scanner" class="view-container active">
+      <div class="studio-grid">
+        <!-- Left: Image Input, Camera & Specimen Library -->
+        <section class="glass-card input-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>🌿</span>
+              <span>Real Leaf Input Stage</span>
+            </h3>
+            <span id="input-status-badge" class="badge-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">Identified</span>
+          </div>
+
+          <!-- Input Mode Switcher -->
+          <div class="input-tabs">
+            <button id="mode-upload-btn" class="input-tab-btn active">
+              <span>📁</span>
+              <span>Upload Custom Photo</span>
+            </button>
+            <button id="mode-camera-btn" class="input-tab-btn">
+              <span>📷</span>
+              <span>Live Camera Scanner</span>
+            </button>
+          </div>
+
+          <!-- Dropzone Area -->
+          <div id="dropzone" class="dropzone-container">
+            <input type="file" id="file-input" accept="image/*" style="display: none;" />
+            
+            <div id="dropzone-empty" class="dropzone-empty">
+              <div class="dropzone-icon">🍃</div>
+              <h4>Upload or Drop Real Tomato Leaf Photo</h4>
+              <p>Drag and drop any leaf photo, paste from clipboard (Ctrl+V), or select below</p>
+              <button type="button" class="btn-secondary" style="margin-top: 0.5rem;" onclick="document.getElementById('file-input').click()">
+                Select Leaf Photo
+              </button>
+            </div>
+
+            <!-- Preview & Heatmap Stage -->
+            <div id="preview-stage" class="preview-stage active">
+              <canvas id="main-canvas" class="main-canvas"></canvas>
+              <canvas id="heatmap-canvas" class="heatmap-overlay"></canvas>
+              <div class="scanner-beam"></div>
+
+              <!-- Reticle Focus Corners -->
+              <div class="reticle-corner reticle-tl"></div>
+              <div class="reticle-corner reticle-tr"></div>
+              <div class="reticle-corner reticle-bl"></div>
+              <div class="reticle-corner reticle-br"></div>
+            </div>
+
+            <!-- Camera Viewport -->
+            <div id="camera-stage" class="camera-stage">
+              <video id="camera-video" autoplay playsinline muted></video>
+              <div class="camera-controls">
+                <button id="btn-snap-camera" class="btn-primary">
+                  <span>📸</span>
+                  <span>Capture & Analyze</span>
+                </button>
+                <button id="btn-cancel-camera" class="btn-secondary">
+                  <span>Cancel</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heatmap & Specimen Variations Bar -->
+          <div class="stage-controls">
+            <label class="control-toggle">
+              <input type="checkbox" id="toggle-heatmap" />
+              <span>Lesion Saliency Heatmap</span>
+            </label>
+
+            <div class="slider-group">
+              <span>Opacity:</span>
+              <input type="range" id="heatmap-opacity" min="0.2" max="1" step="0.05" value="0.75" />
+            </div>
+          </div>
+
+          <!-- Specimen Variation Switcher [Photo 1, 2, 3] -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.85rem; padding: 0.5rem 0.8rem; background: rgba(0, 0, 0, 0.25); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="font-size: 0.78rem; color: var(--text-secondary);">
+              <span>Sample: </span>
+              <strong id="current-photo-indicator" style="color: #34d399;">Real Field Specimen #1</strong>
+            </div>
+
+            <div id="photo-variation-controls" style="display: flex; gap: 0.35rem;">
+              <button class="btn-secondary btn-var active" data-idx="0" style="padding: 0.25rem 0.6rem; font-size: 0.72rem;">Photo 1</button>
+              <button class="btn-secondary btn-var" data-idx="1" style="padding: 0.25rem 0.6rem; font-size: 0.72rem;">Photo 2</button>
+              <button class="btn-secondary btn-var" data-idx="2" style="padding: 0.25rem 0.6rem; font-size: 0.72rem;">Photo 3</button>
+            </div>
+          </div>
+
+          <!-- Presets Library (All 10 Categories with Real Photos) -->
+          <div class="preset-section">
+            <h5>
+              <span>Real Field Leaf Presets (PlantVillage)</span>
+              <span style="font-size: 0.72rem; color: #34d399;">10 Diseases • 30 Photos</span>
+            </h5>
+            <div id="presets-grid" class="preset-grid">
+              <!-- Dynamically populated with real leaf photos -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Neural Diagnosis & Treatment Panel -->
+        <section class="glass-card results-panel">
+          <div class="card-header">
+            <h3 class="card-title">
+              <span>🧬</span>
+              <span>Pathological Diagnosis</span>
+            </h3>
+            <span id="health-index-badge" class="badge-pill severity-healthy">Analyzing</span>
+          </div>
+
+          <div class="diagnosis-hero">
+            <div class="hero-header-row">
+              <div class="disease-title-area">
+                <h2 id="result-disease-name">Early Blight</h2>
+                <p id="result-disease-sci" class="disease-scientific">Alternaria solani</p>
+              </div>
+              <div class="diagnosis-badge-group">
+                <span id="result-pathogen-tag" class="severity-tag severity-moderate">Fungal</span>
+                <span id="result-severity-tag" class="severity-tag severity-critical">Severity: High</span>
+              </div>
+            </div>
+
+            <!-- Quantitative Plant Meters -->
+            <div class="stats-banner">
+              <div class="stat-item">
+                <span class="stat-label">Model Confidence</span>
+                <div class="stat-value">
+                  <span id="stat-confidence">96</span>
+                  <span class="unit">%</span>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <span class="stat-label">Plant Health Score</span>
+                <div class="stat-value">
+                  <span id="stat-health">28</span>
+                  <span class="unit">/100</span>
+                </div>
+              </div>
+
+              <div class="stat-item">
+                <span class="stat-label">Necrosis & Lesion Area</span>
+                <div class="stat-value">
+                  <span id="stat-necrosis">42</span>
+                  <span class="unit">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabbed Treatment & Action Plan -->
+          <div class="action-plan-wrapper">
+            <div class="plan-tabs">
+              <button class="plan-tab-btn active" data-tab="symptoms">
+                <span>🔍</span>
+                <span>Symptoms</span>
+              </button>
+              <button class="plan-tab-btn" data-tab="organic">
+                <span>🌱</span>
+                <span>Organic Control</span>
+              </button>
+              <button class="plan-tab-btn" data-tab="chemical">
+                <span>🧪</span>
+                <span>Chemical Sprays</span>
+              </button>
+              <button class="plan-tab-btn" data-tab="prevention">
+                <span>🛡️</span>
+                <span>Prevention & Care</span>
+              </button>
+            </div>
+
+            <!-- Tab Panes -->
+            <div id="pane-symptoms" class="plan-content-pane active">
+              <ul id="list-symptoms" class="bullet-checklist">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+
+            <div id="pane-organic" class="plan-content-pane">
+              <ul id="list-organic" class="bullet-checklist">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+
+            <div id="pane-chemical" class="plan-content-pane">
+              <ul id="list-chemical" class="bullet-checklist">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+
+            <div id="pane-prevention" class="plan-content-pane">
+              <ul id="list-prevention" class="bullet-checklist">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Neural Probability Distribution (All 10 Classes) -->
+          <div class="confidence-breakdown">
+            <h4>
+              <span>10-Class Neural Network Softmax Distribution</span>
+              <span id="top-class-badge" style="font-size: 0.75rem; color: #34d399;">Top Match: Ready</span>
+            </h4>
+            <div id="confidence-bars" class="bars-list">
+              <!-- Dynamically populated probability bars -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- TAB 2: Disease Encyclopedia -->
+    <section id="view-encyclopedia" class="view-container">
+      <div class="glass-card">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">📚 Comprehensive Tomato Pathology Compendium</h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">
+              Field guide to the 10 Solanum lycopersicum leaf conditions evaluated by the convolutional neural network.
+            </p>
+          </div>
+        </div>
+
+        <div class="encyclopedia-search-bar">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="encyclopedia-search" placeholder="Search by disease name, pathogen type, symptoms, or active ingredients..." />
+          </div>
+        </div>
+
+        <div id="encyclopedia-grid" class="encyclopedia-grid">
+          <!-- Populated from diseaseData.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: CNN Model Architecture & Metrics -->
+    <section id="view-model" class="view-container">
+      <div class="glass-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <h3 class="card-title">📊 CNN Model Architecture & Evaluation Metrics</h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">
+              Trained on Kaggle Tomato Dataset (22,930 high-resolution leaf images).
+            </p>
+          </div>
+          <span class="badge-pill" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8;">TensorFlow / Keras</span>
+        </div>
+
+        <div class="metrics-hero-grid">
+          <div class="metric-highlight-card">
+            <span class="number">98.63%</span>
+            <p>Training Accuracy (75 Epochs)</p>
+          </div>
+          <div class="metric-highlight-card">
+            <span class="number">95.48%</span>
+            <p>Validation Accuracy (20% Split)</p>
+          </div>
+          <div class="metric-highlight-card">
+            <span class="number">95.42%</span>
+            <p>Test Set Accuracy (4,585 Images)</p>
+          </div>
+          <div class="metric-highlight-card">
+            <span class="number">> 0.95</span>
+            <p>Mean Multi-class ROC-AUC Score</p>
+          </div>
+        </div>
+
+        <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-top: 1.5rem; color: #f0fdf4;">
+          Convolutional Neural Network Pipeline (from tomato.py)
+        </h4>
+
+        <div class="arch-diagram">
+          <div class="arch-layer-card">
+            <span class="layer-type">InputLayer</span>
+            <span class="layer-shape">(None, 64, 64, 3)</span>
+            <span class="layer-params">Normalized /255.0</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">Conv2D (32, 3x3) + ReLU</span>
+            <span class="layer-shape">(None, 62, 62, 32)</span>
+            <span class="layer-params">896 params</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">MaxPooling2D (2x2) + Dropout(0.2)</span>
+            <span class="layer-shape">(None, 31, 31, 32)</span>
+            <span class="layer-params">Spatial downsampling</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">Conv2D (64, 3x3) + ReLU</span>
+            <span class="layer-shape">(None, 29, 29, 64)</span>
+            <span class="layer-params">18,496 params</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">MaxPooling2D (2x2) + Dropout(0.2)</span>
+            <span class="layer-shape">(None, 14, 14, 64)</span>
+            <span class="layer-params">Feature pooling</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">Conv2D (128, 3x3) + ReLU</span>
+            <span class="layer-shape">(None, 12, 12, 128)</span>
+            <span class="layer-params">73,856 params</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">MaxPooling2D (2x2) + Dropout(0.4)</span>
+            <span class="layer-shape">(None, 6, 6, 128)</span>
+            <span class="layer-params">Regularization</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">Flatten + Dense(64, ReLU)</span>
+            <span class="layer-shape">(None, 4608) ➔ (None, 64)</span>
+            <span class="layer-params">294,976 params</span>
+          </div>
+          <div class="arch-layer-card">
+            <span class="layer-type">Dense(128, ReLU) + Dense(64, ReLU)</span>
+            <span class="layer-shape">(None, 128) ➔ (None, 64)</span>
+            <span class="layer-params">16,512 params</span>
+          </div>
+          <div class="arch-layer-card" style="border-color: rgba(16, 185, 129, 0.4);">
+            <span class="layer-type" style="color: #34d399;">Dense(10, Softmax)</span>
+            <span class="layer-shape">(None, 10)</span>
+            <span class="layer-params">10 Disease Probabilities</span>
+          </div>
+        </div>
+
+        <h4 style="font-family: var(--font-heading); font-size: 1.05rem; margin-top: 2rem; color: #f0fdf4;">
+          Original Model Evaluation Plots
+        </h4>
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h4>Training & Validation Accuracy (75 Epochs)</h4>
+            <img src="/images/acc.png" alt="Classifier Accuracy Curve" loading="lazy" />
+          </div>
+          <div class="chart-card">
+            <h4>Training & Validation Loss Curve</h4>
+            <img src="/images/loss.png" alt="Classifier Loss Curve" loading="lazy" />
+          </div>
+          <div class="chart-card">
+            <h4>Multi-Class ROC-AUC Curves</h4>
+            <img src="/images/ROC.png" alt="ROC Curves per Disease Category" loading="lazy" />
+          </div>
+          <div class="chart-card">
+            <h4>10-Class Test Confusion Matrix</h4>
+            <img src="/images/CM_small.PNG" alt="Test Set Confusion Matrix" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "Tomato___Bacterial_spot": [
+    "/real_leaves/Tomato___Bacterial_spot/leaf_1.jpg",
+    "/real_leaves/Tomato___Bacterial_spot/leaf_2.jpg",
+    "/real_leaves/Tomato___Bacterial_spot/leaf_3.jpg"
+  ],
+  "Tomato___Early_blight": [
+    "/real_leaves/Tomato___Early_blight/leaf_1.jpg",
+    "/real_leaves/Tomato___Early_blight/leaf_2.jpg",
+    "/real_leaves/Tomato___Early_blight/leaf_3.jpg"
+  ],
+  "Tomato___healthy": [
+    "/real_leaves/Tomato___healthy/leaf_1.jpg",
+    "/real_leaves/Tomato___healthy/leaf_2.jpg",
+    "/real_leaves/Tomato___healthy/leaf_3.jpg"
+  ],
+  "Tomato___Late_blight": [
+    "/real_leaves/Tomato___Late_blight/leaf_1.jpg",
+    "/real_leaves/Tomato___Late_blight/leaf_2.jpg",
+    "/real_leaves/Tomato___Late_blight/leaf_3.jpg"
+  ],
+  "Tomato___Leaf_Mold": [
+    "/real_leaves/Tomato___Leaf_Mold/leaf_1.jpg",
+    "/real_leaves/Tomato___Leaf_Mold/leaf_2.jpg",
+    "/real_leaves/Tomato___Leaf_Mold/leaf_3.jpg"
+  ],
+  "Tomato___Septoria_leaf_spot": [
+    "/real_leaves/Tomato___Septoria_leaf_spot/leaf_1.jpg",
+    "/real_leaves/Tomato___Septoria_leaf_spot/leaf_2.jpg",
+    "/real_leaves/Tomato___Septoria_leaf_spot/leaf_3.jpg"
+  ],
+  "Tomato___Spider_mites Two-spotted_spider_mite": [
+    "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_1.jpg",
+    "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_2.jpg",
+    "/real_leaves/Tomato___Spider_mites Two-spotted_spider_mite/leaf_3.jpg"
+  ],
+  "Tomato___Target_Spot": [
+    "/real_leaves/Tomato___Target_Spot/leaf_1.jpg",
+    "/real_leaves/Tomato___Target_Spot/leaf_2.jpg",
+    "/real_leaves/Tomato___Target_Spot/leaf_3.jpg"
+  ],
+  "Tomato___Tomato_mosaic_virus": [
+    "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_1.jpg",
+    "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_2.jpg",
+    "/real_leaves/Tomato___Tomato_mosaic_virus/leaf_3.jpg"
+  ],
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": [
+    "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_1.jpg",
+    "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_2.jpg",
+    "/real_leaves/Tomato___Tomato_Yellow_Leaf_Curl_Virus/leaf_3.jpg"
+  ]
+}
